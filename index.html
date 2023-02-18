@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IDMT Calculator</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="main_body">
+      <div class="header">
+        <p>IDMT CALCULATOR</p>
+      </div>
+      <!-- ===================================================== -->
+      <div class="current">
+        <div class="setting_current">
+          <input type="number" placeholder="Setting Current" id="set_cu" />
+        </div>
+        <!-- ===================================================== -->
+        <div class="fault_current">
+          <input type="number" placeholder="Fault Current" id="fault_cu" />
+        </div>
+      </div>
+      <!-- ===================================================== -->
+      <div class="sifat">
+        <div class="tms_input">
+          <input type="number" placeholder="TMS" id="tms" />
+        </div>
+        <!-- ===================================================== -->
+        <div class="result_button">
+          <button onclick="calTriptime()">Calculate</button>
+        </div>
+      </div>
+      <!-- ===================================================== -->
+      <div class="trip_time">
+        <p id="result"></p>
+      </div>
+    </div>
+    <script>
+      function calTriptime() {
+        var tms = document.getElementById("tms").value;
+        var s = document.getElementById("set_cu").value;
+        var f = document.getElementById("fault_cu").value;
+        var t = (0.14 * tms) / (Math.pow(f / s, 0.02) - 1);
+        t = t.toFixed(3);
+        document.getElementById("result").innerHTML =
+          "Trip time is= " + t + " min";
+      }
+    </script>
+  </body>
+</html>

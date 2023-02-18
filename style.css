@@ -1,0 +1,226 @@
+@font-face {
+  font-family: "roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url(./fonts/Roboto-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "roboto";
+}
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/* ================FOR DESKTOP======================= */
+@media screen and (min-width: 600px) {
+  body {
+    background: #20262e;
+    overflow-x: hidden !important;
+  }
+
+  .main_body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #d3d3d3;
+    border-radius: 10px;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+  }
+  .header {
+    background-color: #FFB84C;
+    margin: 0 0 0px 0;
+    padding: 10px 120px;
+    white-space: nowrap;
+    border-radius: 10px 10px 0px 0px;
+  }
+  .header p {
+    color: #000000;
+    font-size: 28px;
+    font-weight: 900;
+  }
+  .current,
+  .sifat {
+    background-color: #1b2430;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+  }
+  .sifat {
+    background-color: #f84949;
+  }
+
+  .current .setting_current,
+  .current .fault_current,
+  .sifat .tms_input,
+  .sifat .result_button {
+    flex: 1;
+    height: 40px;
+    margin: 10px;
+    box-sizing: border-box;
+  }
+
+  .current .setting_current input,
+  .current .fault_current input,
+  .sifat .tms_input input {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #666;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    font-family: "roboto";
+    font-weight: 900;
+    color: #333;
+    background-color: #f2f2f2;
+  }
+
+  .current .setting_current input:focus,
+  .current .fault_current input:focus,
+  .sifat .tms_input input:focus {
+    outline: none;
+    border-color: #f84949;
+    background-color: #fff;
+  }
+
+  .sifat .result_button button {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background-color: #1F8A70;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #343a40;
+    transition: all 0.3s ease-in-out;
+  }
+  .sifat .result_button button:hover {
+    background-color: #3F979B;
+    box-shadow: 0 0 10px #3F979B;
+  }
+
+  .trip_time {
+    background-color: #FFB84C;
+    margin: 0px 0 0 0;
+    padding: 25px 120px;
+    font-size: 28px;
+    white-space: nowrap;
+    position: relative;
+    border-radius: 0px 0px 10px 10px;
+  }
+  .trip_time #result {
+    position: absolute;
+    color: #000000;
+    font-weight: 900;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* ===========FOR MOBILE== 400px to 600px ============= */
+@media screen and (max-width: 600px) {
+  body{
+    background-color: #20262e;
+  }
+  .main_body {
+    text-align: center;
+    background-color: #20262e;
+  }
+  .header {
+    background-color: #FFB84C;
+    margin: 0 0 0px 0;
+    padding: 30px 0px;
+    white-space: nowrap;
+  }
+  .header p{
+    color: #000000;
+    font-size: 32px;
+    font-weight: 900;
+    text-align: center;
+  }
+  .current,
+  .sifat {
+    background-color: #20262e;
+    justify-content: center;
+    align-items: center;
+  }
+  .current .setting_current,
+  .current .fault_current,
+  .sifat .tms_input,
+  .sifat .result_button {
+    flex: 1;
+    height: 60px;
+    margin: 10px;
+    box-sizing: border-box;
+    margin-top: 50px;
+  }
+  .current .setting_current input,
+  .current .fault_current input,
+  .sifat .tms_input input {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #666;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 32px;
+    font-family: "roboto";
+    font-weight: 900;
+    color: #333;
+    background-color: #f2f2f2;
+  }
+  .current .setting_current input:focus,
+  .current .fault_current input:focus,
+  .sifat .tms_input input:focus {
+    outline: none;
+    border-color: #f84949;
+    background-color: #fff;
+  }
+
+  .sifat .result_button button {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background-color: #1F8A70;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #343a40;
+    transition: all 0.3s ease-in-out;
+  }
+  .sifat .result_button button:hover {
+    background-color: #3F979B;
+    box-shadow: 0 0 10px #3F979B;
+  }
+
+  .trip_time {
+    background-color: #FFB84C;
+    margin: 50px 0 0 0;
+    padding: 30px 0px;
+    font-size: 32px;
+    white-space: nowrap;
+    position: relative;
+  }
+  .trip_time #result {
+    position: absolute;
+    color: #000000;
+    font-weight: 900;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
